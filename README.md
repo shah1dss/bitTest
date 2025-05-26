@@ -34,7 +34,7 @@ This is a React-based application that fetches cocktail data from the CocktailDB
 
 ## Deployment
 
-* The app is deployed on **Vercel** for free hosting. Visit the app at \[https://bit-test-kps1.vercel.app].
+The app is deployed on **Vercel**. Visit the app at [live demo](https://bit-test-kps1.vercel.app).
 
 ## Ideas for Scaling the Project
 
