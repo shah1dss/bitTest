@@ -9,8 +9,18 @@ interface CocktailListProps {
 export const CocktailList = ({ name }: CocktailListProps) => {
   const { data, error, isLoading } = useGetCocktailList(name);
 
-  if (isLoading) return <div className='text-center p-4'>Loading...</div>;
-  if (error) return <div className='text-red-500 p-4'>Error: {error.message}</div>;
+  if (isLoading)
+    return (
+      <div className='text-xl md:text-2xl h-screen flex justify-center items-center p-4'>
+        Loading...
+      </div>
+    );
+  if (error)
+    return (
+      <div className='text-xl md:text-2xl h-screen flex justify-center items-center text-red-500 p-4'>
+        Error: {error.message}
+      </div>
+    );
 
   return (
     <div className='p-1 md:p-2 mx-auto flex flex-col gap-3 md:gap-5 max-w-7xl'>
