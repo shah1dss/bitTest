@@ -16,7 +16,6 @@ export const CocktailList = ({ name }: CocktailListProps) => {
     <div className='p-1 md:p-2 mx-auto flex flex-col gap-3 md:gap-5 max-w-7xl'>
       {data?.drinks?.map((drink: Cocktail) => {
         const ingredients = getCocktailIngredients(drink);
-
         return (
           <div key={drink.idDrink} className='bg-white rounded-lg shadow p-2 md:p-4 lg:p-6'>
             <div className='flex flex-col md:flex-row gap-3 md:gap-6'>
@@ -55,10 +54,10 @@ export const CocktailList = ({ name }: CocktailListProps) => {
                   <h2 className='text-lg md:text-xl font-semibold mb-1 md:mb-2'>Ingredients:</h2>
                   <ul className='space-y-1 md:space-y-2'>
                     {ingredients.map((item, index) => (
-                      <li key={index} className='flex items-baseline'>
-                        <span className='text-sm md:text-base'>{item.ingredient}</span>
-                        <span className='w-16 md:w-24 text-sm md:text-base font-medium'>
-                          {item.measure}
+                      <li key={index} className='flex items-baseline gap-2'>
+                        <span className='text-sm md:text-base font-bold'>{item.ingredient}:</span>
+                        <span className='text-sm md:text-base font-medium italic text-gray-400'>
+                          {item.measure || 'not specified'}
                         </span>
                       </li>
                     ))}
