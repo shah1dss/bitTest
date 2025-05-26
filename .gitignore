@@ -1,0 +1,17 @@
+.DS_Store
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+node_modules/
+dist/
+.temp/
+.cache/
+build/
+coverage/
+.idea/
+.vscode/
+.sass-cache/
